@@ -1,0 +1,63 @@
+{
+  "name": "transformium",
+  "version": "0.1.0",
+  "description": "Transformium is a simple API proxy server implemented using Express. API proxy configuration can be applied immediately on the running server without restarting.",
+  "main": "lib/transformium.js",
+  "bin": {
+    "tf": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/transformium.js",
+    "test": "jest"
+  },
+  "logs": {},
+  "author": "Jung Yongwoo",
+  "license": "MIT",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "chalk": "^2.4.2",
+    "chokidar": "^2.1.5",
+    "express": "^4.16.4",
+    "fs-extra": "^7.0.1",
+    "jest": "^24.7.1",
+    "lodash.merge": "^4.6.1",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "safe-eval": "^0.4.1",
+    "url": "^0.11.0",
+    "winston": "^3.2.1",
+    "workerpool": "^3.1.2",
+    "yargs": "^13.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^2.1.0",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.17.0"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "keywords": [
+    "transformium",
+    "apis",
+    "endpoints",
+    "api gateway",
+    "microservice",
+    "express",
+    "mocking",
+    "lambda",
+    "serverless",
+    "api-proxy"
+  ]
+}
