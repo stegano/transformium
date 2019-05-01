@@ -59,5 +59,13 @@
     "lambda",
     "serverless",
     "api-proxy"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stegano/transformium.git"
+  },
+  "homepage": "https://github.com/stegano/transformium",
+  "bugs": {
+    "url": "https://github.com/stegano/transformium/issues"
+  }
 }
