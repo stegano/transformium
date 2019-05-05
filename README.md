@@ -9,7 +9,7 @@
 
 ## Overview
 
-Transformium allows front-end developers to quickly create the necessary APIs or mocking data, or modify the API response data received from the back-end server without modifying the server code directly.
+Transformium quickly create the necessary APIs or mocking data, or modify the API response data received from the back-end server without modifying the server code directly.
 
 ### Installation
 
@@ -33,7 +33,7 @@ Run the server using the command below.
 $ tf --port 3000 --api-config-path "<apiConfigs path to use>"
 ```
 
-Then open a browser and access `http://localhost:3000/api/examples/test` to see if the server is running properly.
+Then open a browser and access `http://localhost:3000/api/test` to see if the server is running properly.
 
 ### ApiConfigLoaders
 
@@ -63,7 +63,7 @@ apiConfigLoaders: [
 
 ## Why Transformium?
 
-Transformium does not require you to run the server again when adding APIs or modifying response results. You can generate the API by modifying the apiConfig file and implementing the handler function, or you can modify the API response of the existing back-end server. The handler function running on the Transformium server is designed to be inaccessible to the Node API in the handler function because it is executed in the sandbox using safe-eval. Therefore, APIConfig configuration information can be safely processed even if the user inputs it.
+Transformium does not require you to restart server when adding APIs or modifying response results. You can generate the API by modifying the apiConfig file and implementing the handler function, or you can modify the API response of the existing back-end server. The handler function running on the Transformium server is designed to be inaccessible to the Node API in the handler function because it is executed in the sandbox using safe-eval. Therefore, APIConfig configuration information can be safely processed even if the user inputs it.
 
 ## Contributors
 
