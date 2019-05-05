@@ -1,6 +1,7 @@
 const merge = require("lodash.merge");
 const paths = require("./lib/paths");
 const { ApiConfigFileLoader } = require("./lib/ApiConfigFileLoader");
+const managementApp = require("./apps/Management");
 
 module.exports = {
   /**
@@ -41,6 +42,15 @@ module.exports = {
         filePaths: [paths.apiConfigPath]
       },
       module: ApiConfigFileLoader
+    }
+  ],
+  appLoaders: [
+    {
+      options: {
+        allowIp: [":::1"]
+      },
+      path: "/management",
+      module: managementApp
     }
   ],
   /**
