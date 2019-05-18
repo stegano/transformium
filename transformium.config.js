@@ -1,6 +1,7 @@
 const merge = require("lodash.merge");
 const paths = require("./lib/paths");
 const { ApiConfigFileLoader } = require("./lib/ApiConfigFileLoader");
+const managementApp = require("./apps/Management");
 
 module.exports = {
   /**
@@ -41,6 +42,20 @@ module.exports = {
         filePaths: [paths.apiConfigPath]
       },
       module: ApiConfigFileLoader
+    }
+  ],
+  /**
+   * appLoader loads app router implemented with `express`.
+   * The result of the implemented module must be `express.Router`.
+   * When the app module is executed, `options`, `setApiConfig` and `unsetApiConfig` are passed as arguments.
+   * */
+  appLoaders: [
+    {
+      options: {
+        allowIp: [":::1"]
+      },
+      path: "/management",
+      module: managementApp
     }
   ],
   /**
