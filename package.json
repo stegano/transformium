@@ -1,6 +1,6 @@
 {
   "name": "transformium",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Transformium is a simple API proxy server implemented using Express. API proxy configuration can be applied immediately on the running server without restarting.",
   "main": "lib/transformium.js",
   "bin": {
